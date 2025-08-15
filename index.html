@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shade WX</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="glass" aria-label="Hava durumu paneli">
+    <header class="topbar">
+        <div class="brand">Shade WX</div>
+        <nav aria-label="Üst menü">
+            <ul>
+                <li><a href="#" aria-current="page">Ana Sayfa</a></li>
+                <li><a href="#">Tahminler</a></li>
+                <li><a href="#">Radar</a></li>
+                <li><a href="#">Harita</a></li>
+                <li><a href="#">Ayarlar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1 class="title">Shade WX | 25'</h1>
+
+            <form id="search-form" class="search" autocomplete="off" role="search" aria-label="Şehir ara">
+                <input id="city-input" name="q" placeholder="Şehrinizi Yazın" aria-label="Şehir" />
+                <button type="submit" class="btn">Ara</button>
+                <button type="button" id="use-location" class="btn ghost" title="Konumumu Kullan">Konum</button>
+            </form>
+
+            <p class="subtitle" id="status" aria-live="polite">
+                <span id="status-icon" aria-hidden="true"></span>
+                <span id="status-text"></span>
+            </p>
+        </div>
+
+        <aside class="digital" aria-label="Anlık bilgi">
+            <div>
+                <small>Konum</small>
+                <div id="place">—</div>
+            </div>
+            <div class="right">
+                <div class="temp" id="temp">—°</div>
+                <small id="clock">00:00</small>
+            </div>
+        </aside>
+    </section>
+
+    <section class="cards" id="cards" aria-label="Gün içi özet">
+    </section>
+
+    <footer class="footer" aria-label="Ek bilgiler">
+        <div><span class="accent">Basınç:</span> <span id="pressure">—</span></div>
+        <div><span class="accent">Nem:</span> <span id="humidity">—</span></div>
+        <div><span class="accent">Rüzgar:</span> <span id="wind">—</span></div>
+        <div><span class="accent">Hissedilen:</span> <span id="feels">—</span></div>
+        <div><span class="accent">Gün Doğumu:</span> <span id="sunrise">—</span></div>
+        <div><span class="accent">Gün Batımı:</span> <span id="sunset">—</span></div>
+    </footer>
+</main>
+
+<script src="app.js" defer></script>
+</body>
+</html>
